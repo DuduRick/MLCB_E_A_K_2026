@@ -20,5 +20,10 @@ Classe [rastrear_pedido]: 24.54%
 Classe [troca_devolucao]: 47.46%
 
 1 - Sim, o código está correto 
-2 -
-3 -
+2 - ampliação do dataset, para melhorar a eficiencia e acertividade
+3 - ele atua calculando as probabilidades das palavras se encaixarem em cada intenção
+
+--- RESULTADOS DO LAB 03 ---
+
+
+
