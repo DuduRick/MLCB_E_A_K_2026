@@ -25,5 +25,15 @@ Classe [troca_devolucao]: 47.46%
 
 --- RESULTADOS DO LAB 03 ---
 
+1 - A acurácia varia e é pouco confiável porque o conjunto de teste tem pouquíssimas frases, fazendo com que um único erro altere drasticamente o resultado final sem refletir o mundo real
+
+2 - Ela analisa a presença de palavras-chave vetorizadas e cria divisões em cascata baseadas em ganho de informação, fazendo perguntas do tipo "tem essa palavra?" até chegar na classe
+
+3 - O modelo decora demais os dados de treino e perde a capacidade de generalizar, errando assim que pega frases novas ou diferentes das que já viu
+
+--- RESULTADOS DO LAB 04 ---
+
+
+
 
 
