@@ -14,6 +14,3 @@ Matriz Tree:
  [ 0  0  0 31  0]
  [ 3  0  0  0 28]]
 
-Classes (ordem da matriz): ['logistica_entregas', 'reclamacoes', 'suporte', 'trocas_devolucoes', 'vendas']
-
- Arquivo 'resultados_aula05.md' gerado com as métricas preenchidas!
