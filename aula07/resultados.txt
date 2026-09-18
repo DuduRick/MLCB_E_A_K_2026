@@ -1,1 +1,198 @@
+RESPOSTA 1 :
 
+    tokens_limpos = []
+    
+    for palavra in tokens:
+        if palavra in stopwords:
+            continue
+        elif palavra == "comprados":
+            tokens_limpos.append("comprar")
+        elif palavra == "chegaram":
+            tokens_limpos.append("chegar")
+        else:
+            tokens_limpos.append(palavra)
+    
+    print(tokens_limpos)
+    
+    Saída:
+    
+    ['produtos', 'comprar', 'chegar']
+    
+    
+    Qual a diferença entre Stemming e Lematização? Por que a Lematização garante que a palavra exista no dicionário e o Stemming não? 
+    
+RESPOSTA: Stemming é o mecanismo que utiliza recortes de palavras para achar uma "raiz" já a lematização analisa palavra por palavra tendo assim uma acurácia melhor.
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+RESULTADO 2:
+
+    def validar_intencao(confianca):
+        if confianca >= 0.70:
+            return "Ação Executada"
+        else:
+            return "Fallback Acionado"
+    
+    print(validar_intencao(0.55))
+    
+    Saída:
+    
+    Fallback Acionado
+    
+    O que aconteceria de errado no sistema de um banco se o limiar de confiança (Threshold) fosse configurado em apenas 20% (0.20)?
+    
+RESPOSTA: Pelo valor configurado ser muito baixo poderia ser prejudicial para as respostas do sistema.
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+RESULTADOS 3:
+
+    precisao = vp / (vp + fp)
+    
+    print(f"Precisão: {precisao * 100:.0f}%")
+    
+    Saída:
+    
+    Precisão: 80%
+
+    Qual a lógica conceitual do TF-IDF para atribuir peso baixo a palavras muito comuns e peso alto a palavras raras num banco de dados?
+    
+RESULTADOS: palavras comuns como, "De", "O", "A", tem peso baixo porque estão presentes na maioria das frases, já as palavras com menos aparição tem peso maior por ser mais especifica.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+RESULTADOS 4:
+
+    precisao = vp / (vp + fp)
+    
+    print(f"Precisão: {precisao * 100}%")
+    
+    Resultado:
+    
+    Precisão: 80.0%
+    
+    
+    Em detecção de fraudes, o que representa um Falso Positivo e um Falso Negativo? Qual dos dois gera prejuízo financeiro direto à           empresa?
+
+RESPOSTA: Um falso positivo é representado por um erro do sistema quando uma compra normal é vista como fraude, já um falso negativo é quando realmente o sistema era pra ter negado uma ação por exemplo, e invez de negar, autoriza o usuario.
+
+RESPOSTA 5:
+
+    solicitacao = {
+    "intencao": "comprar_medicamento",
+    "produto": "analgésico",
+    "quantidade": 2
+    }
+    
+    print(solicitacao)
+
+    Na arquitetura de NLU, qual a diferença conceitual entre Intenção (Intent) e Entidade (Slot)?
+
+RESPOSTA: A intent como o nome já sugere, é o que o usuario tem intenção de fazer, já o slot são as informações importantes para realizar tal ação.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+RESULTADOS 6:
+
+    def sao_sinonimos(distancia):
+        if distancia < 0.20:
+            return True
+        else:
+            return False
+    
+    print(sao_sinonimos(0.05))
+    
+    saida:
+    
+    True
+    
+    Por que um modelo baseado puramente em TF-IDF não consegue entender sinônimos, enquanto o Word Embeddings consegue?
+
+RESPOSTA: O TF-IDF olha a frequência de duas palavras separadas, aluguel e locação são palavras diferentes, ja o Word Embeddings representa as palavras como vetores
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+RESULTADOS 7:
+
+    tokens_limpos = []
+    
+    for palavra in bruta:
+        if palavra not in stopwords and palavra != "!":
+            tokens_limpos.append(palavra)
+    
+    print(tokens_limpos)
+    
+    Saida:
+    
+    ['sistema', 'muito', 'lento', 'hoje']
+
+
+O que são Stopwords e por que sua remoção é importante no pré-processamento?
+
+RESPOSTA: Stopwords são palavras muito comuns em um texto como "o", "a", "de" e "está", elas ajuda deixar o texto bem mais limpo e diminui as informações.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+RESULTADOS 8:
+
+    vp = 90
+    fn = 10
+    
+    recall = vp / (vp + fn)
+    
+    print(f"Recall: {recall * 100}%")
+    
+    Saida:
+    
+    Recall: 90.0%
+
+O Recall foca em evitar Falsos Positivos ou Falsos Negativos? Por que ter um 
+Recall alto é vital na área de saúde ou segurança?
+    
+RESPOSTA: O Recall foca em evitar Falsos Negativos, Ter um Recall alto é importante.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+RESULTADOS 9:
+
+
+    radicais = []
+    
+    for palavra in palavras:
+        radicais.append("corr")
+    
+    print(radicais)
+    
+    Resultado:
+    
+    ['corr', 'corr', 'corr']
+    
+     O que caracteriza o Stemming em termos de processamento e por que ele é mais rápido do que a Lematização?
+
+RESULTADOS: O Stemming é um processo simnples, pois ele não analisa regras gramaticais
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+RESULTADOS 10: 
+
+    maior_confianca = max(probabilidades)
+    
+    if maior_confianca >= limiar:
+        print("Intenção Confirmada")
+    else:
+        print("Acionar Fallback")
+    
+    Resultado:
+    
+    Acionar Fallback
+    
+    Diante de uma intenção ambígua que aciona o Fallback, qual mensagem o chatbot deve exibir ao usuário e qual o objetivo dessa resposta?
+
+RESULTADOS: o chat bot poderia responder algo como "desculpe, não entendi, poderia explicar mwelhor?"
+o objetivo é pedir mais informações ao usuario. 
